@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_check_result_root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_rectangle_green"
+    android:orientation="vertical">
+
+    <!--1.登记成功;2.时间控件-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_result_state"
+            android:layout_width="312dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/success_inside" />
+
+        <TextClock
+            android:id="@+id/tv_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="54dp"
+            android:layout_marginTop="40dp"
+            android:format24Hour="yyyy年MM月dd日 aa h:mm"
+            android:textColor="#76dbab"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/bt_checkResult_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/down_cross_back_selector2" />
+    </RelativeLayout>
+
+    <!--三个照片-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginRight="66dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_img1_container"
+            android:layout_width="360dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_scene_img"
+                android:layout_width="360dp"
+                android:layout_height="360dp"
+                android:background="@drawable/shape_rectangle_green_dark2" />
+
+            <TextView
+                android:id="@+id/tv_scene_photo_descripiton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/shape_rectangle_green_dark"
+                android:gravity="center"
+                android:text="现场照片"
+                android:textColor="@color/colorWhite"
+                android:textSize="26sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_img2_container"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp">
+
+            <ImageView
+                android:id="@+id/iv_register_img"
+                android:layout_width="360dp"
+                android:layout_height="360dp"
+                android:background="@drawable/shape_rectangle_green_dark2" />
+
+            <TextView
+                android:id="@+id/tv_register_photo_descripiton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/shape_rectangle_green_dark"
+                android:gravity="center"
+                android:text="证件照片"
+                android:textColor="@color/colorWhite"
+                android:textSize="26sp" />
+
+        </FrameLayout>
+
+        <!--黑名单和未登记的共用的特殊布局-->
+        <LinearLayout
+            android:id="@+id/ll_black_list_container"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!--未登记时显示的布局上面的部分-->
+            <RelativeLayout
+                android:id="@+id/rl_unregister_container1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_unlogin_visitor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="96dp"
+                    android:text="姓名： 张三"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="38dp" />
+
+                <TextView
+                    android:id="@+id/tv_allow_state_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="174dp"
+                    android:text="是否允许通过："
+                    android:textColor="@color/colorWhite"
+                    android:textSize="38dp" />
+
+                <TextView
+                    android:id="@+id/tv_unregister_allow"
+                    android:layout_width="170dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/tv_allow_state_content"
+                    android:layout_marginTop="34dp"
+                    android:background="@drawable/down_grey4_grey5_selector"
+                    android:gravity="center"
+                    android:text="允许"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="38sp" />
+
+                <TextView
+                    android:id="@+id/tv_unregister_refuse"
+                    android:layout_width="170dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/tv_allow_state_content"
+                    android:layout_marginLeft="188dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@drawable/down_grey4_grey5_selector"
+                    android:gravity="center"
+                    android:text="拒绝"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="38sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_call_guard"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="72dp"
+                android:background="@drawable/down_grey3_selector"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/success_inside_notice" />
+
+                <TextView
+                    android:id="@+id/tv_call_guard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通知保卫"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="34sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_call_lead"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="72dp"
+                android:background="@drawable/down_grey3_selector"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/success_inside_notice" />
+
+                <TextView
+                    android:id="@+id/tv_call_lead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通知负责人"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="34sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!---->
+        <FrameLayout
+            android:id="@+id/fl_img3_container"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_stu_img"
+                android:layout_width="360dp"
+                android:layout_height="360dp"
+                android:background="@drawable/shape_rectangle_green_dark2" />
+
+            <TextView
+                android:id="@+id/tv_stu_photo_descripiton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/shape_rectangle_green_dark"
+                android:gravity="center"
+                android:text="学生照片"
+                android:textColor="@color/colorWhite"
+                android:textSize="26sp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_unregister_container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="该来访人员从未登记，请选择登记类型："
+            android:textColor="@color/colorWhite"
+            android:textSize="38sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_setting_parent"
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/down_grey4_grey5_selector"
+                android:gravity="center"
+                android:text="家长"
+                android:textColor="@color/colorWhite"
+                android:textSize="38sp" />
+
+            <RadioButton
+                android:id="@+id/rb_setting_teacher"
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/down_grey4_grey5_selector"
+                android:gravity="center"
+                android:text="教师"
+                android:textColor="@color/colorWhite"
+                android:textSize="38sp" />
+
+            <RadioButton
+                android:id="@+id/rb_setting_stu"
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/down_grey4_grey5_selector"
+                android:gravity="center"
+                android:text="学生"
+                android:textColor="@color/colorWhite"
+                android:textSize="38sp" />
+
+            <RadioButton
+                android:id="@+id/rb_setting_blacklist"
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/down_grey4_grey5_selector"
+                android:gravity="center"
+                android:text="黑名单"
+                android:textColor="@color/colorWhite"
+                android:textSize="38sp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!--1.登记信息;2.通知教师，打印通行证。。未登记和黑名单的时候，下面这布局不显示。显示上面的布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <!--1.登记信息-->
+        <LinearLayout
+            android:id="@+id/ll_info_container"
+            android:layout_width="792dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_info_title_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的登记信息"
+                android:textColor="@color/colorWhite"
+                android:textSize="42sp" />
+
+            <TextView
+                android:id="@+id/tv_stu_parent_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_stu_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_stu_teacher_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <!--2.通知教师，打印通行证-->
+        <LinearLayout
+            android:id="@+id/ll_call_and_print_container"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_call_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:background="@drawable/down_greendark_green_selector"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/success_inside_notice" />
+
+                <TextView
+                    android:id="@+id/tv_call_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通知教师"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="34sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_print_password"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/down_greendark_green_selector"
+                android:gravity="center">
+                <!--登记成功的布局-->
+                <ImageView
+                    android:id="@+id/iv_print_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/success_inside_print"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_print"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打印通行证"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="34sp"
+                    android:visibility="visible" />
+                <!--未预约时要隐藏上面两个控件,显示下面的2个控件,并且控件背景颜色要重新设置-->
+                <TextView
+                    android:id="@+id/tv_allow"
+                    android:layout_width="170dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="9dp"
+                    android:gravity="center"
+                    android:text="允许"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="34sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_refuse"
+                    android:layout_width="170dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:text="拒绝"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="34sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--技术支持描述-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_tech_support_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="36dp"
+            android:text="@string/app_support_info"
+            android:textColor="#76dbab"
+            android:textSize="24sp" />
+    </RelativeLayout>
+</LinearLayout>

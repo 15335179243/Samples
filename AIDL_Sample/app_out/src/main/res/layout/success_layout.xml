@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_rectangle_green">
+
+    <TextClock
+        style="@style/clockStyle"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/colorGreen2"
+        android:textSize="30sp" />
+
+    <TextView
+        style="@style/tv_tech_support_content_style"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorGreen2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_img"
+            android:layout_width="441dp"
+            android:layout_height="441dp"
+            android:background="@color/colorGreen3">
+
+            <ImageView
+                android:id="@+id/success_img"
+                android:layout_width="358dp"
+                android:layout_height="441dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="96dp"
+            android:layout_toRightOf="@id/rl_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_result_state"
+                android:layout_width="380dp"
+                android:layout_height="120dp"
+                android:background="@drawable/success_outer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="您的登记信息"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tv_parent_info"
+                style="@style/visitor_info_style"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_stu_info"
+                style="@style/visitor_info_style"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_teacher_info"
+                style="@style/visitor_info_style"
+                android:text="" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

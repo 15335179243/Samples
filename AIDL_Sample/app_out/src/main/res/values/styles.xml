@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="clockStyle">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">54dp</item>
+        <item name="android:layout_marginTop">64dp</item>
+        <item name="android:format24Hour">yyyy年MM月dd日 aa h:mm</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#a9c7ff</item>
+
+        <!--<style name="mian_page_button_style">
+            <item name="android:layout_width">0dp</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:textColor">#ffffff</item>
+            <item name="android:background">#08f</item>
+        </style>-->
+
+    </style>
+
+    <style name="tv_visitor_info_title">
+        <item name="android:textColor">@color/colorGrey1</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv_visitor_info_content">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv_tech_support_content_style">
+        <item name="android:text">山东眼神智能科技提供技术支持</item>
+        <item name="android:layout_marginBottom">50dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorGrey2</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="visitor_info_style">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+
+        <TextClock
+            style="@style/clockStyle"
+            android:layout_width="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="3"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="山东眼神智能科技提供技术支持"
+            android:textColor="@color/colorGrey2"
+            android:textSize="22sp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/bt_visitorRecord_back"
+            style="@style/record_page_button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_weight="0.8"
+            android:padding="2dp"
+            android:text="返回"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="4.1">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_home_page"
+            style="@style/record_page_button_style1"
+            android:layout_marginLeft="30dp"
+            android:text="首页" />
+
+        <TextView
+            android:id="@+id/tv_prepage"
+            style="@style/record_page_button_style1"
+            android:text="上一页" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="第" />
+
+        <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/tv_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="2" />
+
+        <TextView
+            android:id="@+id/tv_third"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="3" />
+
+        <TextView
+            android:id="@+id/tv_fourth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="4" />
+
+        <TextView
+            android:id="@+id/tv_fifth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="5" />
+
+        <TextView
+            android:id="@+id/tv_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:text="页" />
+
+        <TextView
+            android:id="@+id/tv_next_page"
+            style="@style/record_page_button_style1"
+            android:text="下一页" />
+
+        <TextView
+            android:id="@+id/tv_end_page"
+            style="@style/record_page_button_style1"
+            android:text="尾页" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+            <ImageView
+                android:id="@+id/iv_clear_record"
+                android:background="@drawable/garbage_selector"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

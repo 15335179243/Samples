@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.eyecool.data.grpc";
+option java_outer_classname = "SynchroDataProtos";
+option objc_class_prefix = "EYECOOL";
+package synchrodata;
+service SynchroData{
+    //同步人员信息 客户端轮询 带最后一次同步人员的最大唯一号 返回数据在data中，格式json
+	rpc syncCustomers(SyncCusRequest) returns (SyncResponse){}
+	//根据人员唯一标识获取人员照片 返回是base64串 返回数据在data中，格式json
+	rpc getImgByCustomerId(CustomerIdRequest) returns (SyncResponse) {}
+	//同步比对日志，返回操作结果，data中为接收到的数据唯一号（全平台唯一客户端生成）
+	rpc syncMatchLogs(SyncLogRequest) returns (SyncResponse) {}
+	//同步前端设备所需参数接口
+	rpc syncDevParams(SyncParamRequest) returns (SyncResponse) {}
+	//同步前端显示信息接口 如会议和电子班牌等前端设备显示信息
+	rpc syncDevShowInfos(SyncDevShowInfosRequest) returns (SyncResponse) {}
+	//同步前端处理中存在的错误信息，如取照片失败，取参数失败等
+	rpc syncFailInfos(SyncFailsRequest) returns (SyncResponse){}
+	//更新前端apk版本
+	rpc syncVersion(SyncVersionRequest) returns (SyncResponse){}
+	//获取人员照片 新增扩展（哪个设备的照片类型等）
+	rpc syncCusImg(SyncCusImgRequest) returns (SyncResponse){}
+	//前端操作人员信息 后台处理
+	rpc clientOperCus(ClientOperCusRequest) returns (SyncResponse){}
+	//前端定时上传监控信息，暂定为每十分钟发送一次
+	rpc deviceMonitor(DeviceMonitorRequest) returns (SyncResponse){}
+}
+//同步人员请求 data为json格式如{"lastId":"0","deviceNo":"设备唯一号"}
+message SyncCusRequest{
+	string data=1;
+}
+//data为请求返回数据 json格式
+message SyncResponse{
+	string code=1;
+	string msg=2;
+	string data=3;
+}
+message CustomerIdRequest{
+	string customerId=1;
+	string deviceNo=2;
+}
+//data 为比对日志信息的json格式数据如{"deviceNo":"","matchTime":""}
+message SyncLogRequest{
+	string data=1;
+}
+//请求为 暂时为{"deviceNo":"唯一编号"}
+message SyncParamRequest{
+	string data=1;
+}
+//请求为 暂时为{"deviceNo":"唯一编号"}
+message SyncDevShowInfosRequest{
+	string data=1;
+}
+//请求type为 customer/customerImg/devParam/devShowInfo/matchlog
+//data为json数组 如[{},{}]
+//deviceNo为设备号
+message SyncFailsRequest{
+	string data=1;
+	string type=2;
+	string deviceNo=3;
+}
+//请求为 暂时为{"deviceNo":"唯一编号"}
+message SyncVersionRequest{
+	string data=1;
+}//请求为 暂时为{"deviceNo":"唯一编号","imgType":"0原照1缩略照","customerId":"人员唯一号"}
+message SyncCusImgRequest{
+	string data=1;
+}
+//请求为 data 暂时为{"cusNo":"工号","cardNo":"卡号","cusName":"姓名","cusGender":"性别0男1女","cusImg":"照片base64"} "deviceNo":"唯一编号",operType 为 ADD\MODIFY\DELETE
+message ClientOperCusRequest{
+	string data=1;
+	string operType=2;
+	string deviceNo=3;
+}
+//请求为 data 暂时为{"cpuUsage":"cpu使用率保留两位小数","memUsage":"内存占用率保留两位小数","diskUsage":"磁盘占用率保留两位小数","cpuTemperature":"cpu温度两位小数","createTime":"监控时间 yyyy-MM-dd HH:mm:ss格式"} "deviceNo":"唯一编号"
+message DeviceMonitorRequest{
+	string data=1;
+	string deviceNo=2;
+}

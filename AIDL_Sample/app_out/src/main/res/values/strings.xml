@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">VCom外屏</string>
+
+    <string name="remote_service_action">com.eyecool.visitor_system_remote_service</string>
+    <string name="remote_service_package_name">com.eyecool.visitor.sys</string>
+
+
+
+    <!--首页面控件描述-->
+    <string name="main_page_title">北京大学智能访客登记</string>
+    <string name="main_page_cue_visitor">请您出示身份证，置于读卡区进行登记</string>
+    <string name="checkface_cue_1">请将人脸移至视频框内</string>
+    <string name="checkface_cue_2">认证中...</string>
+    <string name="checkface_cue_2_error">认证失败，请重试！</string>
+    <dimen name="tv_checkface_cue_1_size">56sp</dimen>
+    <dimen name="tv_checkface_cue_2_size">46sp</dimen>
+    <dimen name="tv_checkface_cue_1_marginLeft">50dp</dimen>
+    <dimen name="tv_checkface_cue_2_marginLeft">50dp</dimen>
+    <dimen name="tv_checkface_cue_1_marginTop">50dp</dimen>
+    <dimen name="tv_checkface_cue_2_marginBottom">30dp</dimen>
+
+    <string name="checkResult_visitor_info_state_login_ok">登记成功</string>
+    <string name="checkResult_visitor_info_state_recgnize_ok">认证成功</string>
+    <string name="checkResult_visitor_info_state_waitting">您未预约，正在联系教师，请稍后...</string>
+    <string name="checkResult_visitor_info_state_refuse_1">很抱歉，联系教师失败，不能进入！</string>
+    <string name="checkResult_visitor_info_state_refuse_2">很抱歉，未能通过认证，不能进入！</string>
+
+
+
+
+    <!--其他控件描述，之设人证比对界面-->
+    <string name="idcard_read_state_ok">读卡成功！</string>
+    <string name="idcard_read_state_replace">请将二代身份证移开后重新放置在读卡区域！</string>
+    <string name="idcard_read_state_place">请刷身份证！</string>
+    <string name="idcard_read_state_error">读卡失败！</string>
+    <string name="idcard_face_match_retry">验证失败，请重试！</string>
+</resources>

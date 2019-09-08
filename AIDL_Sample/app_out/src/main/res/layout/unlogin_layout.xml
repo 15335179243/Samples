@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_rectangle_grey7"
+    android:layout_height="match_parent">
+    <TextClock
+        style="@style/clockStyle"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/colorGrey6"
+        android:textSize="30sp" />
+    <TextView
+        style="@style/tv_tech_support_content_style"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorGrey6" />
+    <ImageView
+        android:id="@+id/iv_unlogin"
+        android:src="@drawable/notregistered_outer"
+        android:layout_centerInParent="true"
+        android:layout_width="691dp"
+        android:layout_height="261dp" />
+
+</RelativeLayout>

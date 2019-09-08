@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.kk.grpc.bean";
+option java_outer_classname = "FacePassProtos";
+option objc_class_prefix = "HLWS";
+package facePass;
+service FacePassService{
+	rpc clienTrade(stream ClientRequest) returns (stream ClientResponse) {}
+}
+
+message ClientRequest{
+	string data=1;
+	string type=2;
+}
+message ClientResponse{
+	string data=1;
+}

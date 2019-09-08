@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_info_item_container"
+    android:layout_width="1140px"
+    android:layout_height="45px"
+    android:background="@drawable/down_green_selector"
+    android:orientation="vertical">
+
+
+    <View
+        android:background="@color/colorGrey11"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include layout="@layout/line_grey_vertical" />
+
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="80px"
+            style="@style/info_item_style"
+            android:text="序号" />
+
+        <include layout="@layout/line_grey_vertical" />
+
+        <TextView
+            android:id="@+id/tv_parent_name"
+            style="@style/info_item_style"
+            android:text="家长姓名" />
+
+        <include layout="@layout/line_grey_vertical" />
+        <TextView
+            android:id="@+id/tv_stu_name"
+            style="@style/info_item_style"
+            android:text="学生姓名" />
+
+        <include layout="@layout/line_grey_vertical" />
+        <TextView
+            android:id="@+id/tv_stu_class"
+            style="@style/info_item_style"
+            android:text="学生班级" />
+
+        <include layout="@layout/line_grey_vertical" />
+        <TextView
+            android:id="@+id/tv_weclome_teacher"
+            style="@style/info_item_style"
+            android:text="接访老师" />
+        <include layout="@layout/line_grey_vertical" />
+        <TextView
+            android:id="@+id/tv_state"
+            style="@style/info_item_style"
+            android:text="" />
+        <include layout="@layout/line_grey_vertical" />
+
+        <TextView
+            android:id="@+id/tv_login_time"
+            style="@style/info_item_style"
+            android:layout_width="236px"
+            android:text="登记时间" />
+        <include layout="@layout/line_grey_vertical" />
+    </LinearLayout>
+    <View
+        android:visibility="gone"
+        android:id="@+id/view_grey_line_bottom"
+        android:background="@color/colorGrey11"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+
+	1.模拟库表--customer_info
+
+
+		字段：需要增加学生性别，和学生照片
+
+			1.ID
+			0.user_id			    用户id
+			1.name				    姓名
+			2.phone				    手机号
+			3.user_type			    访客类型：家长、学生、老师、黑名单、未知(身份证通过，数据库没有)
+			4.st_class			    班级
+			5.position			    职位
+			6.bespoke			    是否预约
+			7.feature_value			特征值
+			8.feature_img			证件照片路径
+			9.stu_teacher			班主任
+			10.visitor_stu			家长孩子
+			11.card_id			    身份证号
+			12.stu_gender           学生性别
+			13.stu_img              学生照片
+			14.remark			    备注
+
+
+
+	2.来访记录表--visitor_log
+
+		字段：
+
+			1.ID
+			0.user_id 		    用户 id
+			1.name 			    姓名
+			2.phone 		    手机号
+			3.visitor_type		访客状态	如：登记成功、未预约、拒绝、黑名单、学生出入、教工出入、未登记
+			4.stu_class		    班级
+			5.match_time		到访时间
+			6.match_score		匹配分值
+			7.match_img		    抓拍图片路径
+			8.feature_img		证件照照片
+			9.stu_teacher		接访老师
+			10.visitor_stu		家长孩子
+			11.card_id 		    身份证号
+
+
+
+
+
+
+
+
+
+

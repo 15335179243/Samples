@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eyecool.visitor.sys.MainActivity">
+   <!--这个是检测界面的布局-->
+   <RelativeLayout
+       android:visibility="visible"
+       android:background="@color/colorGrey1"
+       android:id="@+id/rl_checkface_root_conatiner"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <FrameLayout
+          android:id="@+id/fl_surfaceView_container"
+          android:layout_width="1066dp"
+          android:layout_height="match_parent"
+          android:layout_centerHorizontal="true">
+
+         <SurfaceView
+             android:id="@+id/surfaceView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:visibility="visible" />
+
+      </FrameLayout>
+
+      <!--这个提示，如果检测到人脸就隐藏-->
+      <TextView
+          android:id="@+id/tv_cue1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="52dp"
+          android:text="请将人脸移至视频框内"
+          android:textColor="@color/colorWhite"
+          android:textSize="36dp" />
+
+      <!--改提示如果在比对特征值，就显示-->
+      <TextView
+          android:id="@+id/tv_cue2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="86dp"
+          android:text=""
+          android:textColor="@color/colorWhite2"
+          android:textSize="60dp" />
+
+      <TextView
+          android:layout_marginBottom="30dp"
+          android:textColor="#b4b4b4"
+          style="@style/tv_tech_support_content_style" />
+
+   </RelativeLayout>
+
+
+   <!--这个是比对结果的布局，里面根据比对情况填充相应内容-->
+   <RelativeLayout
+       android:visibility="invisible"
+       android:id="@+id/rl_checkresut_conatiner"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </RelativeLayout>
+
+
+
+   <!--这个是首页的布局-->
+   <RelativeLayout
+       android:background="@color/colorWhite"
+       android:id="@+id/rl_main_root_container"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/tv_Warm"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="20dp"
+          android:textColor="@color/colorOrange"
+          android:textSize="30sp" />
+
+      <RelativeLayout
+          android:layout_width="932dp"
+          android:layout_height="588dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="70dp"
+          android:background="@drawable/standby_outer_card">
+
+         <TextView
+             android:id="@+id/tv_mainPageTitle"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="54dp"
+             android:layout_marginTop="64dp"
+             android:padding="5dp"
+             android:text="@string/main_page_title"
+             android:textColor="@color/colorWhite"
+             android:textSize="36sp" />
+
+         <TextClock style="@style/clockStyle" />
+      </RelativeLayout>
+
+      <TextView style="@style/tv_tech_support_content_style" />
+   </RelativeLayout>
+
+</FrameLayout>

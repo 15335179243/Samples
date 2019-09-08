@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">VCom内屏</string>
+
+    <string name="remote_service_action">com.eyecool.visitor_system_remote_service</string>
+    <string name="remote_service_package_name">com.eyecool.visitor.sys</string>
+
+    <string name="idcard_name">姓名：</string>
+    <string name="idcard_gender">性别：</string>
+    <string name="idcard_nation">民族：</string>
+    <string name="idcard_birthday">出生日期：</string>
+    <string name="idcard_address">家庭住址：</string>
+    <string name="idcard_number">身份证号码：</string>
+    <string name="idcard_authorize_bureau">签发机关：</string>
+    <string name="idcard_valid_date">有效期：</string>
+    <string name="idcard_finger_printer_info">指纹信息：</string>
+
+    <!--其他控件描述，之设人证比对界面-->
+    <string name="idcard_read_state_ok">读卡成功！</string>
+    <string name="idcard_read_state_replace">请将二代身份证移开后重新放置在读卡区域！</string>
+    <string name="idcard_read_state_place">请刷身份证！</string>
+    <string name="idcard_read_state_error">读卡失败！</string>
+    <string name="idcard_face_match_retry">验证失败，请重试！</string>
+
+
+
+
+    <!--其他控件描述，之设置界面-->
+    <string name="sys_setting">系统设置</string>
+    <string name="server_ip">服务器IP：</string>
+    <string name="server_ip_default_address">192.168.1.1</string>
+    <string name="server_ip_address_hint">192.168.1.1</string>
+    <string name="date_time">日期时间：</string>
+    <string name="algorithm_authorize">算法授权：</string>
+    <string name="software_version">软件版本：</string>
+    <string name="bt_save">保存</string>
+    <string name="bt_cancle">取消</string>
+    <string name="setting_cue_ipaddress_error">IP地址格式错误，请重新输入！</string>
+    <string name="setting_cue_ipaddress_null">请输入ip地址！</string>
+    <dimen name="setting_root_layout_padding">50dp</dimen>
+    <dimen name="setting_bt_save_margin_right">502dp</dimen>
+    <dimen name="setting_bt_cancle_margin_right">332dp</dimen>
+    <dimen name="setting_ll_server_ip_margin_top">190dp</dimen>
+    <dimen name="setting_ll_date_time_margin_top">290dp</dimen>
+    <dimen name="setting_ll_algorithm_authorize_margin_top">390dp</dimen>
+    <dimen name="setting_ll_software_verison_margin_top">490dp</dimen>
+    <dimen name="setting_tv_sys_setting_size">48sp</dimen>
+    <dimen name="setting_et_server_ip_width">360dp</dimen>
+    <dimen name="setting_tv_et_algorithm_authorize_file_width">260sp</dimen>
+
+    <!--其他控件描述，之比对结果界面-->
+    <dimen name="check_result_root_layout_padding">30dp</dimen>
+    <dimen name="check_result_scene_photo_padding_left">220dp</dimen>
+    <dimen name="check_result_register_photo_padding_left">560dp</dimen>
+    <dimen name="check_result_student_photo_padding_left">900dp</dimen>
+    <dimen name="check_result__photo_width">240dp</dimen>
+    <dimen name="check_result_photo_height">240dp</dimen>
+    <dimen name="check_result_photo_space">100dp</dimen>
+    <string name="tv_check_result_visitor_state_login_ok">登记成功</string>
+    <string name="tv_check_result_visitor_state_no_bespoke">未预约!</string>
+    <string name="tv_check_result_visitor_state_teacher_refuse">教师拒绝!</string>
+    <string name="tv_check_result_visitor_state_black_list">黑名单!</string>
+    <string name="tv_check_result_visitor_state_authorize_ok">登记成功</string>
+    <string name="tv_check_result_photo_type_scene">现场照片</string>
+    <string name="tv_check_result_photo_type_register">证件照片</string>
+    <string name="tv_check_result_photo_type_stu">学生照片</string>
+    <string name="tv_check_result_photo_type_stu_register">学生注册照片</string>
+    <string name="tv_check_result_photo_type_teacher_register">学生注册照片</string>
+    <string name="tv_check_result_visitor_info_title_login">登记信息：</string>
+    <string name="tv_check_result_visitor_info_title_black_list">黑名单：</string>
+    <string name="tv_check_result_visitor_info_title_student">学生信息：</string>
+    <string name="tv_check_result_visitor_info_title_teacher">教工信息：</string>
+    <string name="tv_check_result_visitor_info_parent_name">家长姓名：</string>
+    <string name="tv_check_result_visitor_info_stu">学生信息：</string>
+    <string name="tv_check_result_visitor_info_main_teacher">班主任信息：</string>
+    <string name="tv_check_result_visitor_info_teacher">教师信息：</string>
+    <string name="tv_check_result_visitor_info_relative">相关负责人信息：</string>
+    <string name="tv_check_result_visitor_info_remark">备注：</string>
+    <string name="bt_call_teacher">通知教师</string>
+    <string name="bt_print_passport">打印通行证</string>
+    <string name="bt_call_guard">呼叫保卫</string>
+    <string name="bt_call_superintendent">通知负责人</string>
+    <string name="bt_allow">允许</string>
+    <string name="bt_refuse">拒绝</string>
+
+
+    <!--通用控件描述-->
+    <string name="bt_back">返回</string>
+    <string name="app_support_info">山东眼神智能科技提供技术支持</string>
+</resources>
